@@ -1,0 +1,28 @@
+<html ng-app="campaign-contrib">
+<head>
+  <link rel="stylesheet" href="./stylesheets/semantic.css" />
+  <link rel="stylesheet" href="./stylesheets/style.css" />
+  <base href="campaign-contrib">
+</head>
+<body>
+  <div class="ui menu">
+    <a class="item" ui-sref="home">Home</a>
+    <a class="item" ui-sref="candidates">Candidates</a>
+    <a class="item" ui-sref="contributors">Contributors</a>
+    <a class="item" ui-sref="vendors">Vendors</a>
+  </div>
+  <div class="container" ui-view>
+  </div>
+  <!-- deps -->
+  <script src="./scripts/jquery.js"></script>
+  <script src="./scripts/semantic.js"></script>
+  <!-- angular -->
+  <script src="./scripts/angular.js"></script>
+  <script src="./scripts/angular-ui-router.js"></script>
+  <!-- app -->
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/config.js"></script>
+  <script src="./scripts/routes.js"></script>
+  <script src="./scripts/controllers.js"></script>
+</body>
+</html>
