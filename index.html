@@ -5,14 +5,15 @@
   <base href="campaign-contrib">
 </head>
 <body>
-  <div class="ui menu">
-    <a class="item" ui-sref="home">Home</a>
-    <a class="item" ui-sref="candidates">Candidates</a>
-    <a class="item" ui-sref="contributors">Contributors</a>
-    <a class="item" ui-sref="vendors">Vendors</a>
+  <div class="ui secondary pointing menu">
+    <a class="item" ui-sref="home" ui-sref-active="active">Home</a>
+    <a class="item" ui-sref="candidates" ui-sref-active="active">Candidates</a>
+    <a class="item" ui-sref="contributors" ui-sref-active="active">Contributors</a>
+    <a class="item" ui-sref="vendors" ui-sref-active="active">Vendors</a>
   </div>
   <div class="container" ui-view>
   </div>
+  <div class="backdrop"</div>
   <!-- deps -->
   <script src="./scripts/jquery.js"></script>
   <script src="./scripts/semantic.js"></script>

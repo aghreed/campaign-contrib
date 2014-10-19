@@ -1,8 +1,23 @@
 //variables
-@background: #f0c5c9;
+@background: fade(#c63341, 70%);
+@nebraskaOutline: url('../images/nebraska.svg');
+
+* {
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: @background;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 40px;
+  background: @nebraskaOutline no-repeat center;
+  background-size: 1200px;
+  z-index: 1;
 }
