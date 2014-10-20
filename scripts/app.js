@@ -2,7 +2,8 @@
   'use strict';
 
     var app = angular.module('campaign-contrib', [
-      'ui.router'
+      'ui.router',
+      'ngTable'
     ]);
 
     app.run(['$rootScope', '$state', '$stateParams', '$log', function( $rootScope, $state, $stateParams, $log) {

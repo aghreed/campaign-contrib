@@ -1,1 +1,83 @@
-<h2>HOME STATE REACHED</h2>
+<div class="home">
+  <h2 class="ui header text align center">Nebraska Campaign Contributions</h2>
+
+  <!-- <div class="search text align center">
+    <div class="ui icon input">
+      <input type="text" ng-model="query" placeholder="Search...">
+      <i class="search icon"></i>
+    </div>
+  </div> -->
+
+  <table ng-table="tableParams" class="ui table">
+    <thead>
+      <tr>
+        <th>Candidate Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="candidate in $data">
+          <td class="selectable" ui-sref="candidate-detail({id: candidate.id})">{{candidate.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <div class="overview">
+    <div class="ui three column grid">
+      <div class="column">
+        <div class="ui divided list">
+          <div class="item">
+            <div class="content">
+              <a class="header">New York City</a>
+              <div class="description">A lovely city</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <a class="header">Chicago</a>
+              <div class="description">A lovely city</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <a class="header">Los Angeles</a>
+              <div class="description">A lovely city</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <a class="header">San Francisco</a>
+              <div class="description">A lovely city</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui divided list">
+          <div class="item">
+            <div class="content">
+              <a class="header">New York City</a>
+              <div class="description">A lovely city</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <a class="header">Chicago</a>
+              <div class="description">A lovely city</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <a class="header">Los Angeles</a>
+              <div class="description">A lovely city</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <a class="header">San Francisco</a>
+              <div class="description">A lovely city</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

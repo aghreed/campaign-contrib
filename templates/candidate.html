@@ -1,0 +1,30 @@
+<div class="candidate-detail">
+
+  <div class="ui header">{{details.first_name}} {{details.last_name}} --- Running for: {{details.campaigns[0].office_description}}</div>
+  <div class="ui small header text align right">
+    In State: <span class="dollar">${{details.cash_received.in_state}}</span>
+    Out of State: <span class="dollar">${{details.cash_received.out_of_state}}</span>
+  </div>
+  <div class="ui small header text align right">Total Contributions Amount: ${{totalContributionAmount}}</div>
+
+  <table class="ui table">
+    <thead>
+      <tr>
+        <th>Date Contributed</th>
+        <th>Contribution Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="contribution in details.contributions_received">
+        <td>
+          {{contribution.date}}
+        </td>
+        <td>
+          ${{contribution.cash}}
+        </td>
+      </tr>
+    </tbody>
+
+  </div>
+
+</div>

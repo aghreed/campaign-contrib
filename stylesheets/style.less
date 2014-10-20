@@ -1,6 +1,11 @@
 //variables
-@background: fade(#c63341, 70%);
+// @background: #dad5d7;
+@bodyBackground: tint(#e1d480, 25%);
+@background: fade(#a3959c, 90%);
+@contrastRed: #c63341;
+@contrastYellow: #d4c249;
 @nebraskaOutline: url('../images/nebraska.svg');
+@white: white;
 
 * {
   padding: 0;
@@ -9,7 +14,7 @@
 }
 
 body {
-  background-color: @background;
+  background-color: @bodyBackground;
 }
 
 .backdrop {
@@ -18,6 +23,150 @@ body {
   height: 100%;
   top: 40px;
   background: @nebraskaOutline no-repeat center;
-  background-size: 1200px;
+  background-size: 1350px;
   z-index: 1;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 85%;
+  min-width: 768px;
+  max-width: 1024px;
+  // background-color: @background;
+  background-color: fade(@bodyBackground, 70%);
+  padding: 0.75em;
+}
+
+
+.home {
+  .search {
+    .input {
+        font-size: 1.5em;
+
+        input {
+          border-radius: 0;
+        }
+    }
+  }
+
+  .overview {
+    padding-top: 3em;
+  }
+}
+
+// variations
+
+.ui.menu {
+  &.secondary.pointing {
+    // background-color: @background;
+    background-color: @white;
+  }
+  .item {
+    font-size: 1.2rem;
+    color: fade(@contrastRed, 80%);
+
+    &:hover {
+      color: fade(@contrastYellow, 60%) !important;
+    }
+
+    &.active {
+      color: @contrastYellow;
+      border-color: @contrastYellow !important;
+
+      &:hover {
+        color: fade(@contrastYellow, 60%) !important;
+      }
+    }
+  }
+}
+
+.ui.header {
+  color: @contrastRed;
+}
+
+// helpers
+
+.text {
+  &.align {
+    &.center {
+      text-align: center;
+    }
+    &.left {
+      text-align: left;
+    }
+    &.right {
+      text-align: right;
+    }
+  }
+}
+
+.selectable:hover {
+  background-color: @contrastYellow;
+  cursor: pointer;
+}
+
+// hotfix
+.pagination {
+  height: 42px;
+  margin: 21px 0;
+}
+.pagination ul {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  margin-left: 0;
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.pagination li {
+  background-color: fade(@white, 90%);
+  display: inline;
+}
+.pagination a {
+  float: left;
+  padding: 0 14px;
+  line-height: 40px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-left-width: 0;
+}
+.pagination a:hover,
+.pagination .active a {
+  background-color: #f5f5f5;
+}
+.pagination .active a {
+  color: #999999;
+  cursor: default;
+}
+.pagination .disabled span,
+.pagination .disabled a,
+.pagination .disabled a:hover {
+  color: #999999;
+  background-color: transparent;
+  cursor: default;
+}
+.pagination li:first-child a {
+  border-left-width: 1px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.pagination li:last-child a {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.pagination-centered {
+  text-align: center;
+}
+.pagination-right {
+  text-align: right;
 }

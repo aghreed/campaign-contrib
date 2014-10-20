@@ -10,12 +10,18 @@
       $stateProvider
         .state('home', {
           url: '/home',
-          templateUrl: 'templates/home.html'
+          templateUrl: 'templates/home.html',
+          controller: 'HomeController'
         })
         .state('candidates', {
-          url: '/cadidates',
+          url: '/candidates',
           templateUrl: 'templates/candidates.html',
           controller: 'CandidatesController'
+        })
+        .state('candidate-detail', {
+          url: '/candidates/:id',
+          templateUrl: 'templates/candidate.html',
+          controller: 'CandidateDetailController'
         })
         .state('contributors', {
           url: '/contributors',
