@@ -95,6 +95,7 @@ body {
   text-decoration: none;
   border: 1px solid #ddd;
   border-left-width: 0;
+  background-color: #ffffff !important;
 }
 .pagination a:hover,
 .pagination .active a {

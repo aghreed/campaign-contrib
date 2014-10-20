@@ -3,9 +3,11 @@
   <div class="ui header">{{details.first_name}} {{details.last_name}} --- Running for: {{details.campaigns[0].office_description}}</div>
   <div class="ui small header text align right">
     In State: <span class="dollar">${{details.cash_received.in_state}}</span>
-    Out of State: <span class="dollar">${{details.cash_received.out_of_state}}</span>
   </div>
-  <div class="ui small header text align right">Total Contributions Amount: ${{totalContributionAmount}}</div>
+  <div class="ui small header text align right">
+  Out of State: <span class="dollar">${{details.cash_received.out_of_state}}</span>
+  </div>
+  <div class="ui small header text align right total">Total Contributions Amount: ${{totalContributionAmount}}</div>
 
   <table class="ui table">
     <thead>
